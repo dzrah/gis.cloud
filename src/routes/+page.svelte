@@ -1,6 +1,6 @@
 <script>
 	import Countdown from './countdown.svelte';
-	import { db } from '../firebase.js';
+	import { db } from '../firebase';
 	import { collection, addDoc } from 'firebase/firestore';
 
 	let name = '';
@@ -9,16 +9,14 @@
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		try {
-			await addDoc(collection(db, 'users'), {
-				name,
-				email
-			});
+			console.log('Submitting:', { name, email });
+			await addDoc(collection(db, 'users'), { name, email });
 			alert('User added successfully');
 			name = '';
 			email = '';
 		} catch (e) {
-			console.error('Error adding document: ', e);
-			alert('Error adding user');
+			console.error('Error adding document:', e);
+			alert('Error adding user: ' + e.message);
 		}
 	};
 </script>
