@@ -45,7 +45,7 @@
 					<input
 						required
 						bind:value={name}
-						class="h-[2.5rem] w-full rounded-[.3rem] placeholder:ml-5"
+						class="h-[2.5rem] w-full rounded-[.3rem] pl-5"
 						type="text"
 						placeholder="Name"
 						id="name"
@@ -56,7 +56,7 @@
 					<input
 						required
 						bind:value={email}
-						class="h-[2.5rem] rounded-[.3rem] rounded-r-[0]"
+						class="h-[2.5rem] rounded-[.3rem] rounded-r-[0] pl-5"
 						type="email"
 						placeholder="Email address"
 						id="email"
