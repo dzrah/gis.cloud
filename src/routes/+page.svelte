@@ -45,6 +45,7 @@
 			>
 				<div class="flex">
 					<input
+						required
 						bind:value={name}
 						class="h-[2.5rem] w-full rounded-[.3rem] placeholder:ml-5"
 						type="text"
@@ -55,11 +56,12 @@
 				</div>
 				<div class="flex flex-col lg:flex-row">
 					<input
+						required
 						bind:value={email}
 						class="h-[2.5rem] rounded-[.3rem] rounded-r-[0]"
 						type="email"
 						placeholder="Email address"
-						id="email address"
+						id="email"
 						size="40"
 					/>
 					<button
