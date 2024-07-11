@@ -22,10 +22,10 @@
 </script>
 
 <main
-	class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-bg-img bg-cover bg-no-repeat before:absolute before:inset-0 before:block before:bg-opacity-40 before:bg-gradient-to-t before:from-[#13C2CC] before:to-[#13c3cc00] before:opacity-50 before:content-['']"
+	class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-bg-img bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:block before:bg-opacity-40 before:bg-gradient-to-t before:from-[#13C2CC] before:to-[#13c3cc00] before:opacity-50 before:content-[''] lg:bg-left-top"
 >
 	<div
-		class="z-20 mb-20 flex w-full flex-col items-start justify-start px-16 lg:mr-64 lg:w-[52rem]"
+		class="z-20 mb-24 flex w-full flex-col items-start justify-start px-16 lg:mr-64 lg:w-[52rem]"
 	>
 		<div class="flex h-auto w-[17rem] items-start justify-start lg:w-96">
 			<img class="flex items-start justify-start" src="/gis_cloud_logo.svg" alt="" />
@@ -58,7 +58,7 @@
 					<input
 						required
 						bind:value={email}
-						class="relative h-[2.5rem] w-full rounded-[.3rem] rounded-r-[0] pl-5"
+						class="relative h-[2.5rem] w-full rounded-[.3rem] pl-5 lg:rounded-r-[0]"
 						type="email"
 						placeholder="Email address"
 						id="email"
