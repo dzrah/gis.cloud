@@ -5,6 +5,9 @@ export default {
 		extend: {
 			backgroundImage: {
 				'bg-img': "url('/bg.jpg')"
+			},
+			fontFamily: {
+				sans: ['Montserrat', 'sans - serif']
 			}
 		}
 	},
