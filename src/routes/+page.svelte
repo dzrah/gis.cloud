@@ -11,7 +11,7 @@
 		try {
 			console.log('Submitting:', { name, email });
 			await addDoc(collection(db, 'users'), { name, email });
-			alert('User added successfully');
+			alert('You have been successfully subscribed');
 			name = '';
 			email = '';
 		} catch (e) {
@@ -22,16 +22,16 @@
 </script>
 
 <main
-	class="flex h-screen max-h-screen flex-col justify-start overflow-hidden bg-bg-img bg-cover bg-no-repeat pl-12 pt-32 before:absolute before:inset-0 before:block before:bg-opacity-40 before:bg-gradient-to-t before:from-[#13C2CC] before:to-[#13c3cc00] before:opacity-50 before:content-[''] lg:pl-48 lg:pt-40"
+	class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-bg-img bg-cover bg-no-repeat before:absolute before:inset-0 before:block before:bg-opacity-40 before:bg-gradient-to-t before:from-[#13C2CC] before:to-[#13c3cc00] before:opacity-50 before:content-['']"
 >
-	<div class="z-20 flex w-full flex-col lg:w-[52rem]">
-		<div class="flex h-auto w-[14rem] items-center justify-center lg:w-96">
+	<div class="z-20 flex w-full flex-col items-start justify-start px-16 lg:mr-64 lg:w-[52rem]">
+		<div class="flex h-auto w-[17rem] items-center justify-center lg:w-96">
 			<img src="/gis_cloud_logo.svg" alt="" />
 		</div>
-		<div>
+		<div class="flex w-full">
 			<p class="mt-3 text-3xl font-semibold text-white lg:text-5xl">Launching gis.cloud soon</p>
 		</div>
-		<div class="mt-16 flex w-full flex-col lg:w-[59rem]">
+		<div class="mt-8 flex w-full flex-col lg:mt-16 lg:w-[59rem]">
 			<div class="flex items-center justify-start">
 				<p class="text-1xl mr-5 mt-3 w-full text-white lg:text-3xl">
 					Sign up to our newsletter to receive the latest updates
@@ -41,22 +41,22 @@
 				on:submit|preventDefault={handleSubmit}
 				class="mt-5 flex w-full flex-col items-start justify-start gap-5 lg:flex-row"
 			>
-				<div class="flex">
+				<div class="relative flex">
 					<input
 						required
 						bind:value={name}
-						class="h-[2.5rem] w-full rounded-[.3rem] pl-5"
+						class="relative h-[2.5rem] w-full rounded-[.3rem] pl-5"
 						type="text"
 						placeholder="Name"
 						id="name"
 						size="40"
 					/>
 				</div>
-				<div class="flex flex-col lg:flex-row">
+				<div class="relative flex flex-col lg:flex-row">
 					<input
 						required
 						bind:value={email}
-						class="h-[2.5rem] rounded-[.3rem] rounded-r-[0] pl-5"
+						class="relative h-[2.5rem] w-full rounded-[.3rem] rounded-r-[0] pl-5"
 						type="email"
 						placeholder="Email address"
 						id="email"

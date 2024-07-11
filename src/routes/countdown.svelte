@@ -30,7 +30,7 @@
 	});
 </script>
 
-<div class="flex items-center justify-start">
+<div class="flex w-full items-center justify-start">
 	<div class="mt-9 flex items-center justify-start gap-4 text-3xl font-semibold text-white">
 		<div class="flex-1 flex-col items-center justify-center">
 			<p class="text-[0.8rem]">Days</p>
