@@ -33,9 +33,9 @@
 		<div class="flex w-full">
 			<p class="mt-3 text-3xl font-semibold text-white lg:text-5xl">Launching gis.cloud soon</p>
 		</div>
-		<div class="mt-8 flex w-full flex-col lg:mt-16 lg:w-[59rem]">
+		<div class="mt-8 flex w-full flex-col lg:mt-16">
 			<div class="flex items-center justify-start">
-				<p class="text-1xl mr-5 mt-3 w-full text-white lg:text-3xl">
+				<p class="text-1xl mr-5 mt-3 w-full text-white lg:text-2xl">
 					Sign up to our newsletter to receive the latest updates
 				</p>
 			</div>
