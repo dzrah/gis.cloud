@@ -22,7 +22,7 @@
 </script>
 
 <main
-	class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-bg-img bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:block before:bg-opacity-40 before:bg-gradient-to-t before:from-[#13C2CC] before:to-[#13c3cc00] before:opacity-50 before:content-[''] lg:bg-left-top"
+	class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-bg-img bg-cover bg-center before:absolute before:inset-0 before:block before:bg-opacity-40 before:bg-gradient-to-t before:from-[#13C2CC] before:to-[#13c3cc00] before:opacity-50 before:content-[''] lg:bg-left-top"
 >
 	<div
 		class="z-20 mb-24 flex w-full flex-col items-start justify-start px-16 lg:mr-64 lg:w-[52rem]"
