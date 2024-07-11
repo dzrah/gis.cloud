@@ -24,9 +24,11 @@
 <main
 	class="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-bg-img bg-cover bg-no-repeat before:absolute before:inset-0 before:block before:bg-opacity-40 before:bg-gradient-to-t before:from-[#13C2CC] before:to-[#13c3cc00] before:opacity-50 before:content-['']"
 >
-	<div class="z-20 flex w-full flex-col items-start justify-start px-16 lg:mr-64 lg:w-[52rem]">
-		<div class="flex h-auto w-[17rem] items-center justify-center lg:w-96">
-			<img src="/gis_cloud_logo.svg" alt="" />
+	<div
+		class="z-20 mb-20 flex w-full flex-col items-start justify-start px-16 lg:mr-64 lg:w-[52rem]"
+	>
+		<div class="flex h-auto w-[17rem] items-start justify-start lg:w-96">
+			<img class="flex items-start justify-start" src="/gis_cloud_logo.svg" alt="" />
 		</div>
 		<div class="flex w-full">
 			<p class="mt-3 text-3xl font-semibold text-white lg:text-5xl">Launching gis.cloud soon</p>
