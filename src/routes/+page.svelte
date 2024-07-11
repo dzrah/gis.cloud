@@ -63,7 +63,7 @@
 						size="40"
 					/>
 					<button
-						class="mt-5 flex items-center justify-center rounded-md rounded-l-md bg-gradient-to-l from-[#126FF0] to-[#13C2CC] px-4 py-2 font-semibold uppercase tracking-wide text-white lg:mt-0 lg:rounded-l-[0]"
+						class=" mt-5 flex items-center justify-center rounded-md rounded-l-md bg-gradient-to-l from-[#126FF0] to-[#13C2CC] px-4 py-2 font-semibold uppercase tracking-wide text-white transition-all lg:mt-0 lg:rounded-l-[0]"
 						type="submit">Subscribe</button
 					>
 				</div>

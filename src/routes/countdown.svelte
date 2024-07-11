@@ -8,7 +8,7 @@
 		const seconds = document.getElementById('seconds');
 		const days_t = document.getElementById('days-t');
 
-		const launchDate = new Date('July 29 2024 12:00:00');
+		const launchDate = new Date('December 2 2024 12:00:00');
 
 		function updateCountDown() {
 			const currentTime = new Date();
