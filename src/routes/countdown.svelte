@@ -12,10 +12,19 @@
 		const currentTime = new Date().getTime();
 		const diff = launchDate - currentTime;
 
-		days = Math.floor(diff / 1000 / 60 / 60 / 24);
-		hours = Math.floor(diff / 1000 / 60 / 60) % 24;
-		minutes = Math.floor(diff / 1000 / 60) % 60;
-		seconds = Math.floor(diff / 1000) % 60;
+		days = Math.floor(diff / (1000 * 60 * 60 * 24))
+			.toString()
+			.padStart(2, '0');
+
+		hours = Math.floor((diff / (1000 * 60 * 60)) % 24)
+			.toString()
+			.padStart(2, '0');
+		minutes = Math.floor((diff / (1000 * 60)) % 60)
+			.toString()
+			.padStart(2, '0');
+		seconds = Math.floor((diff / 1000) % 60)
+			.toString()
+			.padStart(2, '0');
 	}
 
 	const interval = setInterval(updateCountDown, 1000);
@@ -31,7 +40,7 @@
 <div class="flex w-full items-center justify-start">
 	<div class="mt-9 flex items-center justify-start gap-4 text-3xl font-semibold text-white">
 		<div class="flex-1 flex-col items-center justify-center">
-			<p class="text-[0.8rem]">Days</p>
+			<p class="flex items-center justify-start text-[0.8rem]">Days</p>
 			<div class="flex items-center justify-center gap-2">
 				<h2 id="days">{days}</h2>
 				<p>:</p>
@@ -39,7 +48,7 @@
 		</div>
 
 		<div class="flex-1 flex-col items-center justify-center">
-			<p class="text-[0.8rem]">Hours</p>
+			<p class="flex items-center justify-start text-[0.8rem]">Hours</p>
 			<div class="flex items-center justify-center gap-3">
 				<h2 id="hours">{hours}</h2>
 				<p>:</p>
@@ -47,7 +56,7 @@
 		</div>
 
 		<div class="flex-1 flex-col items-center justify-center">
-			<p class="text-[0.8rem]">Minutes</p>
+			<p class="flex items-center justify-start text-[0.8rem]">Minutes</p>
 			<div class="flex items-center justify-center gap-3">
 				<h2 id="minutes">{minutes}</h2>
 				<p>:</p>
@@ -55,7 +64,7 @@
 		</div>
 
 		<div class="flex-1 flex-col items-center justify-center">
-			<p class="text-[0.8rem]">Seconds</p>
+			<p class="flex items-center justify-start text-[0.8rem]">Seconds</p>
 			<div class="flex items-center justify-center gap-0">
 				<h2 id="seconds">{seconds}</h2>
 			</div>
