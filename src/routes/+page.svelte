@@ -6,11 +6,45 @@
 	let name = '';
 	let email = '';
 
+	const getLocation = () => {
+		return new Promise((resolve, reject) => {
+			if (!navigator.geolocation) {
+				reject(new Error('Geolocation is not supported by your browser'));
+			} else {
+				navigator.geolocation.getCurrentPosition(
+					(position) => {
+						resolve({
+							latitude: position.coords.latitude,
+							longitude: position.coords.longitude
+						});
+					},
+					(error) => reject(error)
+				);
+			}
+		});
+	};
+
+	const getCountry = async (latitude, longitude) => {
+		const apiKey = 'f172151879664b5f9010b144ecf2dc31'; // Replace with your OpenCage API key
+		const response = await fetch(
+			`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`
+		);
+		const data = await response.json();
+		if (data.results.length > 0) {
+			return data.results[0].components.country;
+		} else {
+			throw new Error('No country found');
+		}
+	};
+
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		try {
-			console.log('Submitting:', { name, email });
-			await addDoc(collection(db, 'users'), { name, email });
+			const subscribedAt = new Date();
+			const location = await getLocation();
+			const country = await getCountry(location.latitude, location.longitude);
+			console.log('Submitting:', { name, email, subscribedAt, country });
+			await addDoc(collection(db, 'users'), { name, email, subscribedAt, country });
 			alert('You have been successfully subscribed');
 			name = '';
 			email = '';
