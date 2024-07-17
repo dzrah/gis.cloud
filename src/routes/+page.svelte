@@ -75,7 +75,7 @@
 			</div>
 			<form
 				on:submit|preventDefault={handleSubmit}
-				class="mt-5 flex w-full flex-col items-start justify-start gap-5 lg:flex-row"
+				class="mt-5 flex flex-col items-start justify-start gap-5 lg:flex-row"
 			>
 				<div class="relative flex">
 					<input
@@ -99,7 +99,7 @@
 						size="40"
 					/>
 					<button
-						class=" mt-5 flex items-center justify-center rounded-md rounded-l-md bg-[#13C2CC] px-4 py-2 font-semibold uppercase tracking-wide text-white transition-all duration-[300s] hover:bg-[#126FF0] lg:mt-0 lg:rounded-l-[0]"
+						class=" duration-600 mt-5 flex items-center justify-center rounded-md rounded-l-md bg-[#13C2CC] px-4 py-2 font-semibold uppercase tracking-wide text-white transition ease-in-out hover:bg-[#126FF0] lg:mt-0 lg:rounded-l-[0]"
 						type="submit">Subscribe</button
 					>
 				</div>
